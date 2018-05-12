@@ -1,0 +1,39 @@
+INTEGER, PARAMETER :: DP = SELECTED_REAL_KIND (15, 307)		! Define double precision
+
+REAL (DP), PARAMETER :: total_length = 1.0E0_DP			! Physical length
+REAL (DP), PARAMETER :: dx = 5.0E-3_DP				! Value of dx
+REAL (DP), PARAMETER :: cfl = 2.5E-1_DP				! Value of CFL number (dt / dx)
+REAL (DP), PARAMETER :: total_time = 2.0E-1_DP			! Physical time that stop the program
+REAL (DP), PARAMETER :: output_time = 2.0E-2_DP			! Physical time interval for each output
+
+! Run a star model
+LOGICAL, PARAMETER :: star_model = .false.
+LOGICAL, PARAMETER :: checkrho_flag = .false.
+REAL (DP), PARAMETER :: rho_c = 8.5E-4_DP			! Initial central density
+REAL (DP), PARAMETER :: rho_a = 8.5E-7_DP			! Density of the atmosphere
+REAL (DP), PARAMETER :: ini_vel = 0.0E0_DP			! Initial velocity
+REAL (DP), PARAMETER :: vel_a = 0.0E0_DP			! Velocity of the atmosphere
+REAL (DP), PARAMETER :: epsilon_a = 0.0E0_DP			! Value of epsilon of the atmosphere
+INTEGER, PARAMETER :: ini_acc = 2				! Accuracy of the initial date if it is generated
+								! (Do NOT change this unless you know what you are doing)
+INTEGER, PARAMETER :: w_gravity_i = 0				! Presence of gravity:
+								! 1 = present of gravity if sp_dim_i = 2; 
+								! 0 = absent of gravity if sp_sim_i = 2; 
+								! w_gravity_i MUST be set to 0 if sp_dim_i = 0 or 1
+INTEGER, PARAMETER :: relax_max = 100000			! Maximum run time in relaxation of the potential
+REAL (DP), PARAMETER :: tolerance = 3.0E-8_DP			! Tolerance in relaxation of the potential
+
+! Run a test model
+LOGICAL, PARAMETER :: test_model = .true.
+INTEGER, PARAMETER :: test_model_no = 1
+
+! EOS control
+REAL (DP), PARAMETER :: k = 6.0E1_DP				! Value of k in polytropic equation of state
+REAL (DP), PARAMETER :: gamma = 1.4E0_DP			! Value of gamma in polytropic equation of state
+
+! Geometrical factor
+INTEGER, PARAMETER :: sp_dim_i = 0				! Spacial structure: 0 = 1-D Cartesian; 
+								! 1 = Cylindrical symmetric; 2 = spherical symmetric
+! Generic
+REAL, PARAMETER :: smallpara = 1.0E-6_DP			! The small parameter in WENO scheme
+								! (Do NOT change this unless you know what you are doing)

@@ -1,0 +1,13 @@
+SUBROUTINE GETVEL
+USE DEFINITION
+IMPLICIT NONE
+
+INTEGER :: j
+
+DO j = 1, length_step
+	vel (j) = ini_vel
+END DO
+
+CALL BOUNDARY1D (vel, odd)
+
+END SUBROUTINE
