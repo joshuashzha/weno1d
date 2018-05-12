@@ -1,7 +1,7 @@
 clear;
 
 fnheader = 'Star_WENO_';
-fnvar = 'Pressure';
+fnvar = 'Density';
 fnposix = '_1.dat';
 
 fn = [fnheader,fnvar,fnposix];
