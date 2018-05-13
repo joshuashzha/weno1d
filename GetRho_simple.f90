@@ -26,6 +26,24 @@ if(test_model_no == 1) then
 
 elseif(test_model_no == 2) then
 
+   do j=1,length_step
+      if(j <= length_step*5/10) then
+         rho(j) = 1.0_dp
+         vel(j) = -2.0_dp
+         p(j) = 0.4_dp
+         epsilon(j) = p(j) / rho(j) / (gamma-1.0_dp)
+      else
+         rho(j) = 1.0_dp
+         vel(j) = 2.0_dp
+         p(j) = 0.4_dp
+         epsilon(j) = p(j) / rho(j) / (gamma-1.0_dp)
+      endif
+   enddo
+   call boundary1d(rho,even)
+   call boundary1d(vel,even)
+   call boundary1d(p,even)
+   call boundary1d(epsilon,even)
+
 endif
 
 endsubroutine
