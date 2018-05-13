@@ -63,6 +63,6 @@ WRITE (20, 701) global_time, mass
 WRITE (21, 701) global_time, energy
 WRITE (22, 701) global_time, centralrho
 
-701 FORMAT (2F33.15)
+701 FORMAT (2ES38.18E3)
 
 END SUBROUTINE
