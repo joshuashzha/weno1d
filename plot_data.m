@@ -1,4 +1,4 @@
-clear;
+clear;close all;
 
 fnheader = 'Star_WENO_';
 fnvar = 'Density';
@@ -16,7 +16,7 @@ while(fid)
     elseif(strtmp(2) == '"')
         stp = stp+1;
         time(stp) = str2num(strtmp(10:35));
-        for ix = 1:1000
+        for ix = 1:10000
             strtmp = fgetl(fid);
             if(length(strtmp)==0)
                 break;
@@ -25,11 +25,11 @@ while(fid)
             var(ix) = str2num(strtmp(34:66));
         end
     end
-
-end
-
     figure(1)
     plot(x,var)
     axis([0 1 -0.5 1.3])
+    hold on
+end
+
 
 
