@@ -49,8 +49,6 @@ DO m = 11, 22
 	CLOSE (m)
 END DO
 
-CALL BACKUP (n_backup + n - 1)
-
 101 format('step:',1XI4,2X't:',1XES10.3,2X'dt:',1XES9.2)
 102 format('Output at time:',1XES10.3)
 END PROGRAM
