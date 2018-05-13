@@ -45,7 +45,7 @@ DO i = 1, no_of_eq
 	END DO
 
 	DO j = 1, length_step
-		l (i, j) = - dfdx (i, j) !- sp_dim / ((DBLE (j) - 5.0E-1_DP) * dx) * sa (i, j) - sb (i, j)
+		l (i, j) = - dfdx (i, j) - sp_dim / ((DBLE (j) - 5.0E-1_DP) * dx) * sa (i, j) - sb (i, j)
 	END DO
 END DO
 
