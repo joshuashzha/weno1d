@@ -3,6 +3,7 @@ This is a simple version of 1D hydro code, with WENO 5th-order spatial discretiz
 
 # Models
 1. 4 1D Cartesian shock-tube test as Toro(1997).
+2. Radial oscillation of a star will gamma = 1.56.
 
 # Developers
 Originally written by Ka Wing Wong. Modified by Shing Chi Leung and Shuai Zha.
