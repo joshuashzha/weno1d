@@ -21,13 +21,13 @@ while(fid)
             if(length(strtmp)==0)
                 break;
             end
-            x(ix) = str2num(strtmp(1:33));
-            var(ix) = str2num(strtmp(34:66));
+            x(ix) = str2num(strtmp(1:38));
+            var(ix) = str2num(strtmp(39:76));
         end
     end
     figure(1)
     plot(x,var)
-    axis([0 1 -0.5 1.3])
+    %axis([0 1 -0.5 1.3])
     hold on
 end
 
